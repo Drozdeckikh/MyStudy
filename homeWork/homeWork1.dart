@@ -1,4 +1,3 @@
-void main() {
 // 1. Создать функцию в которую мы можем написать любое число и она нам выведет:
 // Чему равно наше число и является ли оно натуральным числом.
 //   Пример вывода:
@@ -16,35 +15,24 @@ void main() {
 //   Пример вывода:
 // “29 февраля было N раз”
 
-//Задание 3 / Массив
-  List<int> list = [1, 4, 5, 3, 4, 6];
-  listSum(list);
-
-//Задание 1
+void main() {
+//Exercise #1 / Natural number
   dynamic number = 12;
   listNatur(number);
 
-//Задание 2, словарь
-
+//Exercise #2 / Vocabulary
   String slov = "мама";
   maps(slov);
 
-//Задание 4
+//Exercise #3 / Array
+  List<int> list = [1, 4, 5, 3, 4, 6];
+  listSum(list);
+
+//Exercise #4 / Leap year
   year(1, 2022);
 }
 
-//Задание 3
-void listSum(list) {
-  int n = 0;
-  for (int i = 0; i < list.length; i++) {
-    n = list[i] + n;
-  }
-  int a = list.length;
-  print("Summ - $n");
-  print("Amount of numbers - $a");
-}
-
-//Задание 1
+//Exercise #1.1
 void listNatur(number) {
   if (number >= 0 && number % 1 == 0) {
     print("Number $number is natural");
@@ -53,8 +41,7 @@ void listNatur(number) {
   }
 }
 
-//Задание 2
-
+//Exercise #2.1
 void maps(slov) {
   var map = {
     "мама": "mother",
@@ -76,8 +63,19 @@ void maps(slov) {
   }
 }
 
-//Задание 4
-year(nach, kon) {
+//Exercise #3.1
+void listSum(list) {
+  int n = 0;
+  for (int i = 0; i < list.length; i++) {
+    n = list[i] + n;
+  }
+  int a = list.length;
+  print("Summ - $n");
+  print("Amount of numbers - $a");
+}
+
+//Exercise #4.1
+void year(nach, kon) {
   int j = 0;
   for (int i = nach; i < kon; i++) {
     if (i % 4 == 0 && i % 100 != 0) {
@@ -88,5 +86,5 @@ year(nach, kon) {
       j++;
     }
   }
-  print("29 февраля было $j раз");
+  print("February 29 was $j times");
 }
